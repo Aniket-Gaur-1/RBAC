@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Admin Panel with Role-Based Access Control (RBAC)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+This project is an Admin Panel with Role-Based Access Control (RBAC), built using React.js. The project allows admins, editors, and viewers to log in and access different features based on their roles.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+-> Login page with hardcoded credentials for different roles: Admin, Editor, and Viewer.
+-> Admin can add, edit, and delete users.
+-> Editor can view users and edit their information, but cannot delete them.
+-> Viewer can only view users and their details.
+-> Simple and clean user interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-> Frontend: React.js, CSS
+-> Mock Authentication: Hardcoded login details for simplicity.
+-> State Management: useState and useEffect for data management.
 
-### `npm test`
+# Roles and Permissions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Admin: Can view, add, edit, and delete users.
+Editor: Can view and edit users, but cannot delete users.
+Viewer: Can only view users, with no permission to edit or delete.
 
-### `npm run build`
+# Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Login as Admin, Editor, or Viewer
+   On the LoginPage, enter the following credentials:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Admin:
+Username: admin
+Password: admin123
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Editor:
+Username: editor
+Password: editor123
 
-### `npm run eject`
+Viewer:
+Username: viewer
+Password: viewer123
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Depending on the credentials, you will be redirected to the Admin Dashboard where your actions are restricted based on your role:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Admin will have full access to add, edit, and delete users.
+Editor will be able to view and edit users but cannot delete them.
+Viewer will only be able to view users, with no permissions for editing or deleting.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Admin Dashboard
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Admin:
+Add User: Admin can add new users.
+Edit User: Admin can edit existing users.
+Delete User: Admin can delete users.
 
-## Learn More
+Editor:
+Edit User: Editor can modify user details but cannot delete any users.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Viewer:
+View User: Viewer can only see the list of users without any editing options.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Credits
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by Aniket
+Inspired by modern RBAC systems.
